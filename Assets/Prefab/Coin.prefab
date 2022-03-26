@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8913471158143823917}
   - component: {fileID: 4296710736128346235}
   - component: {fileID: 7340549928795496230}
-  m_Layer: 11
+  m_Layer: 9
   m_Name: Coin
   m_TagString: Interectibles
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5935909927903089205}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.1, y: -1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -72,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -2070734471
-  m_SortingLayer: 4
+  m_SortingLayerID: -1156679399
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: -2080440546571199364, guid: 4aadca2af6364254cbdbedd56e18e7cd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

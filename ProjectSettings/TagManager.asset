@@ -25,7 +25,7 @@ TagManager:
   - Enemy
   - Interectibles
   - Hazards
-  - 
+  - InvisibleWall
   - 
   - 
   - 
@@ -61,6 +61,9 @@ TagManager:
     locked: 0
   - name: Water
     uniqueID: 1349797387
+    locked: 0
+  - name: Hazards
+    uniqueID: 1881665571
     locked: 0
   - name: Interectbiles
     uniqueID: 3138287897

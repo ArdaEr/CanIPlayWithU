@@ -70,7 +70,7 @@ public class PlayerController : MonoBehaviour
     void Run()
     {
         Vector2 playerVelocity = 
-                new Vector2 (moveInput.x * speed, moveInput.y * speed);
+                new Vector2 (moveInput.x * speed,  _rigid.velocity.y);
         _rigid.velocity = playerVelocity;
 
         bool playerHasHorizontalSpeed = Mathf.Abs(_rigid.velocity.x) > Mathf.Epsilon;
