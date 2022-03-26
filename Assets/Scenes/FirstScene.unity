@@ -7780,17 +7780,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-<<<<<<< Updated upstream
   m_SortingLayerID: -1930232525
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 3268470051332887831, guid: e238aaa58cfc717428c6969ae900e845, type: 3}
-=======
-  m_SortingLayerID: 1933754739
-  m_SortingLayer: 2
-  m_SortingOrder: 1
-  m_Sprite: {fileID: -463396174107571502, guid: d749d675d5b9794499f24b0abaf60aaa, type: 3}
->>>>>>> Stashed changes
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
