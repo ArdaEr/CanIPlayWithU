@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float deathJump = 11f;
     [SerializeField] float deathTiming = 0.4f;
     [SerializeField] ParticleSystem _deathEffect;
+    [SerializeField] ParticleSystem _jumpEffect;
     Vector2 moveInput;
     Rigidbody2D _rigid;
     Animator _anim;
@@ -64,6 +65,7 @@ public class PlayerController : MonoBehaviour
         else if(value.isPressed && jumpCounter == 1 )
         {
             _rigid.velocity += new Vector2 (0f, secondJump);
+            JumpEffect();
             jumpCounter = 0;
         }
     }
@@ -104,5 +106,9 @@ public class PlayerController : MonoBehaviour
     void DeathEffect()
     {
         _deathEffect.Play();
+    }
+    void JumpEffect()
+    {
+        _jumpEffect.Play();
     }
 }
