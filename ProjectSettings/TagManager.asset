@@ -4,23 +4,31 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< Updated upstream
   - Painting
   - King
   - Table
   - skiplevel
+=======
+  - Ground
+  - Hazards
+  - Water
+  - Enemy
+  - Interectibles
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Background
   - Water
   - UI
   - Player
   - Ground
-  - 
-  - 
-  - 
-  - 
+  - Hazards
+  - InvisibleWall
+  - Enemy
+  - Interectibles
   - 
   - 
   - 
@@ -53,4 +61,16 @@ TagManager:
     locked: 0
   - name: Foreground
     uniqueID: 2364734771
+    locked: 0
+  - name: Hazards
+    uniqueID: 771967335
+    locked: 0
+  - name: Coin
+    uniqueID: 2224232825
+    locked: 0
+  - name: Enemy
+    uniqueID: 3443193269
+    locked: 0
+  - name: Player
+    uniqueID: 61610537
     locked: 0

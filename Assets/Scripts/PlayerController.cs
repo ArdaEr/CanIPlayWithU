@@ -8,28 +8,42 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] float speed = 6f;
     [SerializeField] float jumpSpeed = 8f;
+    [SerializeField] float secondJump = 2f;
+    //[SerializeField] float climbSpeed = 4f;
+    [SerializeField] float deathJump = 11f;
+    [SerializeField] float deathTiming = 0.4f;
+    [SerializeField] ParticleSystem _deathEffect;
     Vector2 moveInput;
     Rigidbody2D _rigid;
     Animator _anim;
     CapsuleCollider2D _bodyCollider;
     SpriteRenderer _sprite;
+    BoxCollider2D _feetCollider;
+    GameSession _session;
+    int jumpCounter = 0;
+    bool isAlive = true;
+    float gravityScaleAtStart;
     void Start()
     {
         _rigid = GetComponent<Rigidbody2D>();
         _anim = GetComponent<Animator>();
         _bodyCollider = GetComponent<CapsuleCollider2D>();
+        _feetCollider = GetComponent<BoxCollider2D>();
         _sprite = GetComponent<SpriteRenderer>();
-      
+        gravityScaleAtStart = _rigid.gravityScale;
     }
     void Update()
     {
+        if(!isAlive){return;}
         Run();
+        Die();
         FlipSprite();
     }
 
 
     void OnMove(InputValue value)
     {
+        if(!isAlive){return;}
         moveInput = value.Get<Vector2>();
         
     }
@@ -37,11 +51,21 @@ public class PlayerController : MonoBehaviour
 
     void OnJump(InputValue value)
     {
-        if(value.isPressed && _bodyCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        if(!isAlive){return;}
+        if(value.isPressed && jumpCounter == 0 && _feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
         {
             _rigid.velocity += new Vector2 (0f, jumpSpeed);
+            jumpCounter++;
         }
-
+        else if(value.isPressed && jumpCounter == 1 && _feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        {
+           _rigid.velocity += new Vector2 (0f, jumpSpeed);
+        }
+        else if(value.isPressed && jumpCounter == 1 )
+        {
+            _rigid.velocity += new Vector2 (0f, secondJump);
+            jumpCounter = 0;
+        }
     }
     void Run()
     {
@@ -62,5 +86,23 @@ public class PlayerController : MonoBehaviour
         transform.localScale = 
                 new Vector2 (Mathf.Sign(_rigid.velocity.x), 1f);
         }
+    }
+
+        void Die()
+    {
+        if(_bodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards", "Water")) )
+        {
+            isAlive = false;
+            _rigid.velocity += new Vector2(_rigid.velocity.x, deathJump);
+            //GetComponent<PlayerInput>().enabled = false;
+            _sprite.color = new Color (255, 0 , 0 , 255);
+            Invoke("DeathEffect", deathTiming);
+            _anim.SetTrigger("isDead");
+            FindObjectOfType<GameSession>().Invoke("ProcessPlayerDeath", 1f);
+        }
+    }
+    void DeathEffect()
+    {
+        _deathEffect.Play();
     }
 }
