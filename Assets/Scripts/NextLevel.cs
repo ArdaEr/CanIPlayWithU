@@ -5,15 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class NextLevel : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D other) 
+    [SerializeField] float LevelLoadDelay = 1f;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(other.tag == "Player")
+        if (collision.tag == "Player")
         {
-            LevelLoad();
-        }    
+            StartCoroutine(LoadNextLevel());
+        }
+        
     }
-    void LevelLoad()
+    IEnumerator LoadNextLevel()
     {
-        SceneManager.LoadScene("PlatformScene");
+        yield return new WaitForSecondsRealtime(LevelLoadDelay);
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex; int nextSceneIndex = currentSceneIndex + 1;
+        if (nextSceneIndex == SceneManager.sceneCountInBuildSettings) { nextSceneIndex = 0; }
+        //FindObjectOfType<ScenePersist>().ScenePersistDeath();
+        SceneManager.LoadScene(nextSceneIndex);
     }
 }

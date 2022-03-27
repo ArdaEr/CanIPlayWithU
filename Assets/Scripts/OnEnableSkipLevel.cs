@@ -5,8 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class OnEnableSkipLevel : MonoBehaviour
 {
-    void OnEnable()
+    [SerializeField] float LevelLoadDelay = 1f;
+    private void OnEnable()
     {
-        SceneManager.LoadScene("PlatformScene");
+        StartCoroutine(LoadNextLevel());
+    }
+    IEnumerator LoadNextLevel()
+    {
+        yield return new WaitForSecondsRealtime(LevelLoadDelay);
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex; int nextSceneIndex = currentSceneIndex + 1;
+        if (nextSceneIndex == SceneManager.sceneCountInBuildSettings) { nextSceneIndex = 0; }
+        //FindObjectOfType<ScenePersist>().ScenePersistDeath();
+        SceneManager.LoadScene(nextSceneIndex);
     }
 }

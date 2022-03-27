@@ -5,7 +5,7 @@ using TMPro;
 
 public class CoinPickUp : MonoBehaviour
 {
-    //[SerializeField] AudioClip _audio;
+    [SerializeField] AudioClip _audio;
     [SerializeField] int pointsForCoin = 1;
     bool wasCollected = false;
     
@@ -16,7 +16,7 @@ public class CoinPickUp : MonoBehaviour
             wasCollected = true;
             FindObjectOfType<GameSession>().TakeCoin(pointsForCoin);
             Destroy(gameObject);
-            //AudioSource.PlayClipAtPoint(_audio, Camera.main.transform.position);
+            AudioSource.PlayClipAtPoint(_audio, Camera.main.transform.position);
         }
     }
 }

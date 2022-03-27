@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] float speed = 6f;
+    [SerializeField] AudioClip _audio;
     [SerializeField] float jumpSpeed = 8f;
     [SerializeField] float secondJump = 2f;
     //[SerializeField] float climbSpeed = 4f;
@@ -101,6 +102,7 @@ public class PlayerController : MonoBehaviour
             Invoke("DeathEffect", deathTiming);
             _anim.SetTrigger("isDead");
             FindObjectOfType<GameSession>().Invoke("ProcessPlayerDeath", 1f);
+            AudioSource.PlayClipAtPoint(_audio, Camera.main.transform.position);
         }
     }
     void DeathEffect()
