@@ -9,8 +9,14 @@ public class KidColliderController : MonoBehaviour
     public PlayableDirector director1;
     public PlayableDirector director2;
     public PlayableDirector director3;
+    public PlayableDirector director4;
+    public PlayableDirector director5;
+    public PlayableDirector director6;
+
     public GameObject controlPanel;
     public PlayerInput playerInput;
+
+    public SpriteRenderer render;
 
     //public PlayableDirector timeline;
     private void OnTriggerEnter2D(Collider2D c)
@@ -23,15 +29,31 @@ public class KidColliderController : MonoBehaviour
         }
         if (c.gameObject.tag == "King")
         {
-            StartCoroutine(DisableInput6());
+            StartCoroutine(DisableInput15());
             director2.Play();
         }
         if (c.gameObject.tag == "Table")
         {
-            StartCoroutine(DisableInput6());
+            StartCoroutine(DisableInput3());
             director3.Play();
         }
-
+        if (c.gameObject.tag == "Farmer")
+        {
+            StartCoroutine(DisableInput8());
+            director4.Play();
+        }
+        if (c.gameObject.tag == "BlackSmith")
+        {
+            StartCoroutine(DisableInput8());
+            director5.Play();
+        }
+        if (c.gameObject.tag == "Water")
+        {
+            director6.Play();
+            render.enabled = false;
+            //StartCoroutine(DisableInput15());
+            
+        }
     }
     private void OnTriggerExit2D(Collider2D c)
     {
@@ -47,6 +69,18 @@ public class KidColliderController : MonoBehaviour
         {
             director3.enabled = false;
         }
+        if (c.gameObject.tag == "Farmer")
+        {
+            director4.enabled = false;
+        }
+        if (c.gameObject.tag == "Farmer")
+        {
+            director5.enabled = false;
+        }
+        if (c.gameObject.tag == "Water")
+        {
+            director6.enabled = false;
+        }
     }
     IEnumerator DisableInput3()
     {
@@ -55,10 +89,16 @@ public class KidColliderController : MonoBehaviour
         playerInput.enabled = true;
 
     }
-    IEnumerator DisableInput6()
+    IEnumerator DisableInput8()
     {
         playerInput.enabled = false;
-        yield return new WaitForSecondsRealtime(6);
+        yield return new WaitForSecondsRealtime(8);
+        playerInput.enabled = true;
+    }
+    IEnumerator DisableInput15()
+    {
+        playerInput.enabled = false;
+        yield return new WaitForSecondsRealtime(15);
         playerInput.enabled = true;
     }
 }
