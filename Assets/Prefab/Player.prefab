@@ -4777,7 +4777,7 @@ ParticleSystemRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 61610537
-  m_SortingLayer: 7
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
@@ -4879,8 +4879,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 61610537
-  m_SortingLayer: 7
+  m_SortingLayerID: -405686373
+  m_SortingLayer: 9
   m_SortingOrder: 0
   m_Sprite: {fileID: 1857188551261513057, guid: 7befdba77381e7d4a9578b41f7c17b1d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -4942,7 +4942,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &1524175888469845211
 CapsuleCollider2D:
@@ -4991,12 +4991,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8830afe0f87d29c49976d02ace88645e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  jumpSpeed: 5
-  secondJump: 4
+  speed: 200
+  _audio: {fileID: 0}
+  jumpSpeed: 220
+  secondJump: 200
   deathJump: 11
   deathTiming: 0.35
   _deathEffect: {fileID: 773293004}
+  _jumpEffect: {fileID: 0}
 --- !u!61 &1981703210
 BoxCollider2D:
   m_ObjectHideFlags: 0
