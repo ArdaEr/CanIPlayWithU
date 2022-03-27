@@ -56,16 +56,16 @@ public class PlayerController : MonoBehaviour
         if(!isAlive){return;}
         if(value.isPressed && jumpCounter == 0 && _feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
         {
-            _rigid.velocity += new Vector2 (0f, jumpSpeed * Time.deltaTime);
+            _rigid.velocity += new Vector2 (0f, jumpSpeed );
             jumpCounter++;
         }
         else if(value.isPressed && jumpCounter == 1 && _feetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
         {
-           _rigid.velocity += new Vector2 (0f, jumpSpeed * Time.deltaTime);
+           _rigid.velocity += new Vector2 (0f, jumpSpeed );
         }
         else if(value.isPressed && jumpCounter == 1 )
         {
-            _rigid.velocity += new Vector2 (0f, secondJump * Time.deltaTime );
+            _rigid.velocity += new Vector2 (0f, secondJump );
             JumpEffect();
             jumpCounter = 0;
         }
@@ -73,7 +73,7 @@ public class PlayerController : MonoBehaviour
     void Run()
     {
         Vector2 playerVelocity = 
-                new Vector2 (moveInput.x * speed * Time.deltaTime,  _rigid.velocity.y);
+                new Vector2 (moveInput.x * speed,  _rigid.velocity.y);
         _rigid.velocity = playerVelocity;
 
         bool playerHasHorizontalSpeed = Mathf.Abs(_rigid.velocity.x) > Mathf.Epsilon;
