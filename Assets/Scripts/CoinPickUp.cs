@@ -6,7 +6,7 @@ using TMPro;
 public class CoinPickUp : MonoBehaviour
 {
     //[SerializeField] AudioClip _audio;
-    [SerializeField] int pointsForCoin = 100;
+    [SerializeField] int pointsForCoin = 1;
     bool wasCollected = false;
     
     private void OnTriggerEnter2D(Collider2D other) 

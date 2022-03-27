@@ -17913,54 +17913,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7270139427626268341, guid: adee50609d6bc4c40a273f73e029d333, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 334
-      objectReference: {fileID: 0}
-    - target: {fileID: 7270139427626268341, guid: adee50609d6bc4c40a273f73e029d333, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 84
-      objectReference: {fileID: 0}
-    - target: {fileID: 7270139427626268341, guid: adee50609d6bc4c40a273f73e029d333, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 779
-      objectReference: {fileID: 0}
-    - target: {fileID: 7270139427626268341, guid: adee50609d6bc4c40a273f73e029d333, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 489
-      objectReference: {fileID: 0}
-    - target: {fileID: 7270139427626268343, guid: adee50609d6bc4c40a273f73e029d333, type: 3}
-      propertyPath: m_fontSize
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 7270139427626268343, guid: adee50609d6bc4c40a273f73e029d333, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 7270139427864410608, guid: adee50609d6bc4c40a273f73e029d333, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 336.4469
-      objectReference: {fileID: 0}
-    - target: {fileID: 7270139427864410608, guid: adee50609d6bc4c40a273f73e029d333, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 84.1117
-      objectReference: {fileID: 0}
-    - target: {fileID: 7270139427864410608, guid: adee50609d6bc4c40a273f73e029d333, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -763.77655
-      objectReference: {fileID: 0}
-    - target: {fileID: 7270139427864410608, guid: adee50609d6bc4c40a273f73e029d333, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 490.0559
-      objectReference: {fileID: 0}
-    - target: {fileID: 7270139427864410614, guid: adee50609d6bc4c40a273f73e029d333, type: 3}
-      propertyPath: m_fontSize
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 7270139427864410614, guid: adee50609d6bc4c40a273f73e029d333, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 50
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: adee50609d6bc4c40a273f73e029d333, type: 3}
 --- !u!1001 &7522947055491673921
