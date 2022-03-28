@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
 
         void Die()
     {
-        if(_bodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards", "Water")) )
+        if(_bodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards", "Water")) || _feetCollider.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards", "Water"))  )
         {
             isAlive = false;
             _rigid.velocity += new Vector2(_rigid.velocity.x, deathJump);
