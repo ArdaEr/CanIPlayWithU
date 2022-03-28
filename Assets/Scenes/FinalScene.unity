@@ -491,11 +491,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &73887179 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 4367162990630754183, guid: 6aefd8608a28cdc4ea662772b15dda5e, type: 3}
-  m_PrefabInstance: {fileID: 1019626685}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &88905486
 GameObject:
   m_ObjectHideFlags: 0
@@ -3615,11 +3610,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7605037560044823355, guid: 6aefd8608a28cdc4ea662772b15dda5e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.77
+      value: -2.51
       objectReference: {fileID: 0}
     - target: {fileID: 7605037560044823355, guid: 6aefd8608a28cdc4ea662772b15dda5e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.59
+      value: 5.04
       objectReference: {fileID: 0}
     - target: {fileID: 7605037560044823355, guid: 6aefd8608a28cdc4ea662772b15dda5e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -8383,20 +8378,12 @@ PlayableDirector:
     value: {fileID: 1328014215}
   - key: {fileID: -7397300846762727669, guid: d325db5e923bf7241b48248a5c83aded, type: 2}
     value: {fileID: 1446569382}
-  - key: {fileID: -3850715922251938353, guid: d325db5e923bf7241b48248a5c83aded, type: 2}
-    value: {fileID: 1446569382}
   - key: {fileID: 113721576392546919, guid: d325db5e923bf7241b48248a5c83aded, type: 2}
     value: {fileID: 0}
   - key: {fileID: 8600718086824705669, guid: d325db5e923bf7241b48248a5c83aded, type: 2}
     value: {fileID: 1840185014}
   - key: {fileID: 1830058502368251034, guid: d325db5e923bf7241b48248a5c83aded, type: 2}
     value: {fileID: 48056099}
-  - key: {fileID: -1046038102026606655, guid: d325db5e923bf7241b48248a5c83aded, type: 2}
-    value: {fileID: 73887179}
-  - key: {fileID: -2588711307321924479, guid: d325db5e923bf7241b48248a5c83aded, type: 2}
-    value: {fileID: 1815908245}
-  - key: {fileID: -6812824742647309115, guid: d325db5e923bf7241b48248a5c83aded, type: 2}
-    value: {fileID: 307555256}
   - key: {fileID: 1926729651479946887, guid: d325db5e923bf7241b48248a5c83aded, type: 2}
     value: {fileID: 2035955237}
   m_ExposedReferences:

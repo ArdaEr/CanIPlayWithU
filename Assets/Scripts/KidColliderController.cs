@@ -33,7 +33,7 @@ public class KidColliderController : MonoBehaviour
             director2.Play();
         }
         if (c.gameObject.tag == "Table")
-        {
+        { 
             StartCoroutine(DisableInput3());
             director3.Play();
         }
