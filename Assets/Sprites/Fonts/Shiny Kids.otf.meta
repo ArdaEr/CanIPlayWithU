@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: ea3531948ec2dfb4288475211fc6511c
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Shiny Kids
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 43dd436e864c21745974620f12991794, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
