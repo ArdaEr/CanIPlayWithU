@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour
             Invoke("DeathEffect", deathTiming);
             _anim.SetTrigger("isDead");
             FindObjectOfType<GameSession>().Invoke("ProcessPlayerDeath", 1f);
-            AudioSource.PlayClipAtPoint(_audio, Camera.main.transform.position);
+            AudioSource.PlayClipAtPoint(_audio, Camera.main.transform.position,0.1f);
         }
     }
     void DeathEffect()
