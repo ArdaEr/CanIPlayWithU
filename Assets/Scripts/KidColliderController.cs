@@ -23,28 +23,28 @@ public class KidColliderController : MonoBehaviour
     {
         if (c.gameObject.tag == "Painting")
         {
-            StartCoroutine(DisableInput3());
+            StartCoroutine(DisableInput4());
             director1.Play();
             
         }
         if (c.gameObject.tag == "King")
         {
-            StartCoroutine(DisableInput15());
+            StartCoroutine(DisableInput20());
             director2.Play();
         }
         if (c.gameObject.tag == "Table")
         { 
-            StartCoroutine(DisableInput3());
+            StartCoroutine(DisableInput4());
             director3.Play();
         }
         if (c.gameObject.tag == "Farmer")
         {
-            StartCoroutine(DisableInput8());
+            StartCoroutine(DisableInput9());
             director4.Play();
         }
         if (c.gameObject.tag == "BlackSmith")
         {
-            StartCoroutine(DisableInput8());
+            StartCoroutine(DisableInput9());
             director5.Play();
         }
         if (c.gameObject.tag == "Water")
@@ -89,16 +89,41 @@ public class KidColliderController : MonoBehaviour
         playerInput.enabled = true;
 
     }
-    IEnumerator DisableInput8()
+    IEnumerator DisableInput4()
     {
         playerInput.enabled = false;
-        yield return new WaitForSecondsRealtime(8);
+        yield return new WaitForSecondsRealtime(4);
+        playerInput.enabled = true;
+
+    }
+    IEnumerator DisableInput5()
+    {
+        playerInput.enabled = false;
+        yield return new WaitForSecondsRealtime(5);
+        playerInput.enabled = true;
+    }
+    IEnumerator DisableInput9()
+    {
+        playerInput.enabled = false;
+        yield return new WaitForSecondsRealtime(9);
+        playerInput.enabled = true;
+    }
+    IEnumerator DisableInput10()
+    {
+        playerInput.enabled = false;
+        yield return new WaitForSecondsRealtime(10);
         playerInput.enabled = true;
     }
     IEnumerator DisableInput15()
     {
         playerInput.enabled = false;
         yield return new WaitForSecondsRealtime(15);
+        playerInput.enabled = true;
+    }
+    IEnumerator DisableInput20()
+    {
+        playerInput.enabled = false;
+        yield return new WaitForSecondsRealtime(20);
         playerInput.enabled = true;
     }
 }

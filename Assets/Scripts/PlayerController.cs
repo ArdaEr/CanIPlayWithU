@@ -70,6 +70,16 @@ public class PlayerController : MonoBehaviour
             jumpCounter = 0;
         }
     }
+    void OnDash(InputValue value)
+    {
+        if (value.isPressed)
+        {
+            FindObjectOfType<DashScript>().Dash(_rigid);
+            //DashScript dash = new DashScript();
+            //Debug.Log(dash.dash);
+            //dash.Dash(_rigid);
+        }
+    }
     void Run()
     {
         Vector2 playerVelocity = 
@@ -91,7 +101,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-        void Die()
+    void Die()
     {
         if(_bodyCollider.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards", "Water")) || _feetCollider.IsTouchingLayers(LayerMask.GetMask("Enemy", "Hazards", "Water"))  )
         {
